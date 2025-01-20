@@ -14,6 +14,7 @@ abstract class NewApiManger {
   factory NewApiManger(Dio dio) = _NewApiManger;
 }
 
+
 ///////////////////////////////////Example of How Will Work With Retrofit/////////////////////
 /////////////////////////// in Repo take object of NewApiManger and get the method you want/////////////////////
 // @injectable
