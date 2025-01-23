@@ -42,6 +42,7 @@ dependencies:
   flutter_easyloading: ^3.0.5
   # HTTP client for Dart
   dio: ^5.7.0
+  google_fonts: ^6.2.1
   # Secure storage for sensitive data
   flutter_secure_storage: ^9.2.2
   # Enhanced dropdown button widget
@@ -80,6 +81,7 @@ dev_dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
+  introduction_screen: ^3.1.14
 
 
 
@@ -102,8 +104,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/images/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
