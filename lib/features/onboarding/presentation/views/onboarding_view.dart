@@ -23,19 +23,19 @@ class _OnBoardingViewState extends State<OnBoardingView> {
         title: 'Empower Your Journey with IEEE Helwan',
         body:
             'Join a thriving community of learners, innovators, and leaders. Discover opportunities, gain knowledge, and contribute to impactful projects.',
-        imagePath: Assets.images4,
+        imagePath: Assets.images1,
       ).toPageViewModel(context),
       OnboardingPageWidget(
         title: 'Be Part of the Team That Fits You',
         body:
             'Volunteers join committees, participate in sessions, complete tasks, and access resources to enhance their skills.',
-        imagePath: Assets.images4,
+        imagePath: Assets.images2,
       ).toPageViewModel(context),
       OnboardingPageWidget(
         title: 'Be Part of the Team That Fits You',
         body:
             'Admins organize events, manage participants, monitor progress, and oversee committees to ensure smooth project execution.',
-        imagePath: Assets.images4,
+        imagePath: Assets.images3,
       ).toPageViewModel(context),
       OnboardingPageWidget(
         title: 'Stay Organized and Productive',
