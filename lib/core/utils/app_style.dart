@@ -1,3 +1,4 @@
+import 'package:dash_board_ieee/core/utils/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 
 abstract class AppStyles {
@@ -14,6 +15,30 @@ abstract class AppStyles {
       fontWeight: FontWeight.w500,
     );
   }
+  static TextStyle styleBold14(context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 14),
+      fontWeight: FontWeightHelper.bold,
+    );
+  }
+  static TextStyle styleBold15(context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 15),
+      fontWeight: FontWeightHelper.bold,
+    );
+  }
+  static TextStyle styleBold16(context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 16),
+      fontWeight: FontWeightHelper.bold,
+    );
+  }
+  static TextStyle styleBold20(context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 20),
+      fontWeight: FontWeightHelper.bold,
+    );
+  }
 
   static TextStyle styleMostThick18(context) {
     return TextStyle(
@@ -26,6 +51,13 @@ abstract class AppStyles {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 16),
       fontWeight: FontWeight.w900,
+    );
+  }
+
+  static TextStyle styleBold34(context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 34),
+      fontWeight: FontWeight.bold,
     );
   }
 }

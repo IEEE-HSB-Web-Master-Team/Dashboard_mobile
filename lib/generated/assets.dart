@@ -6,4 +6,9 @@ class Assets {
   static const String images2 = 'assets/images/2.svg';
   static const String images3 = 'assets/images/3.svg';
   static const String images4 = 'assets/images/4.svg';
+  static const String imagesAuthBackground = 'assets/images/auth_background.svg';
+  static const String imagesLogo = 'assets/images/logo.png';
+  static const String imagesPendingApprove = 'assets/images/pending_approve.svg';
+  static const String imagesWrittenLogo = 'assets/images/written_logo.svg';
+
 }
