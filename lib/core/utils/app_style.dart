@@ -1,3 +1,4 @@
+import 'package:dash_board_ieee/core/utils/app_color.dart';
 import 'package:dash_board_ieee/core/utils/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +18,7 @@ abstract class AppStyles {
   }
   static TextStyle styleBold14(context) {
     return TextStyle(
+      color: AppColor.primaryColor,
       fontSize: getResponsiveFontSize(context, fontSize: 14),
       fontWeight: FontWeightHelper.bold,
     );
@@ -56,6 +58,7 @@ abstract class AppStyles {
 
   static TextStyle styleBold34(context) {
     return TextStyle(
+      color: AppColor.secondaryColor,
       fontSize: getResponsiveFontSize(context, fontSize: 34),
       fontWeight: FontWeight.bold,
     );

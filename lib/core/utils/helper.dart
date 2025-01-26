@@ -1,4 +1,5 @@
 
+import 'package:dash_board_ieee/core/utils/app_color.dart';
 import 'package:flutter/material.dart';
 
 import 'package:intl/intl.dart';
@@ -25,10 +26,13 @@ abstract class Helper {
     return DateFormat.yMMMd().format(date);
   }
 
- static  OutlineInputBorder buildOutlineInputBorder() {
-    return OutlineInputBorder(
-      borderSide: const BorderSide(color: Color(0xffE4DFDF)),
-      borderRadius: BorderRadius.circular(12),
+ static  UnderlineInputBorder buildOutlineInputBorder() {
+    return UnderlineInputBorder(
+      borderRadius: BorderRadius.circular(8),
+      borderSide: BorderSide(
+        color: AppColor.secondaryColor,
+        strokeAlign: BorderSide.strokeAlignOutside,
+        ),
     );
   }
 }

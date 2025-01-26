@@ -1,5 +1,7 @@
+import 'package:dash_board_ieee/config/routes/routs.dart';
 import 'package:dash_board_ieee/core/utils/app_color.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
 import '../../../../generated/assets.dart';
@@ -88,8 +90,12 @@ class _OnBoardingViewState extends State<OnBoardingView> {
             child: ActionButtonsWidget(
               currentPage: currentPage,
               totalPages: getPages().length,
-              onSignInPressed: () {},
-              onSignUpPressed: () {},
+              onSignInPressed: () {
+                context.go(AppRoute.loginView);
+              },
+              onSignUpPressed: () {
+                context.go(AppRoute.signupView);
+              },
               onNextPressed: () => introKey.currentState?.next(),
             ),
           ),
