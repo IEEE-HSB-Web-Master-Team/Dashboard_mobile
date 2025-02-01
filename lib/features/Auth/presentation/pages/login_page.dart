@@ -44,12 +44,15 @@ class LoginPage extends StatelessWidget {
                       children: [
                         TitleTextFiled(
                           title: AppString.email,
-                          hint: "example@example.com",
+                          hint: AppString.email,
+                         
                         ),
                         Gap(8),
                         TitleTextFiled(
                           title: AppString.password,
-                          hint: "***************",
+                      
+                          hint: AppString.password,
+                          
                         ),
                         Gap(8),
                         Align(

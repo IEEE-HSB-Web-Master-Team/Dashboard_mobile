@@ -6,7 +6,7 @@ class TitleTextFiled extends StatelessWidget {
   const TitleTextFiled({
     super.key,
     required this.title,
-    required this.hint,
+    required this.hint, 
   });
 
   final String title;

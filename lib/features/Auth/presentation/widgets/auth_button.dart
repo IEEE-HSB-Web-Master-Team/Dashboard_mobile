@@ -12,6 +12,8 @@ class AuthButton extends StatelessWidget {
     return FittedBox(
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
+          shadowColor: AppColor.primaryColor,
+          elevation: 10,
           padding: EdgeInsets.symmetric(horizontal: 50, vertical: 12),
           backgroundColor: AppColor.primaryColor,
           shape: RoundedRectangleBorder(
