@@ -1,13 +1,20 @@
 import 'dart:ui';
 
+import 'package:dash_board_ieee/config/routes/routs.dart';
 import 'package:dash_board_ieee/core/utils/app_color.dart';
 import 'package:dash_board_ieee/core/utils/app_string.dart';
 import 'package:dash_board_ieee/core/utils/app_style.dart';
 import 'package:dash_board_ieee/core/utils/component/custom_camapaign_textfiled.dart';
+import 'package:dash_board_ieee/features/Auth/presentation/widgets/auth_button.dart';
+import 'package:dash_board_ieee/features/Auth/presentation/widgets/container_form.dart';
+import 'package:dash_board_ieee/features/Auth/presentation/widgets/form_fotter.dart';
+import 'package:dash_board_ieee/features/Auth/presentation/widgets/header_widget.dart';
+import 'package:dash_board_ieee/features/Auth/presentation/widgets/title_text_filed.dart';
 import 'package:dash_board_ieee/generated/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -34,7 +41,6 @@ class LoginPage extends StatelessWidget {
                   Gap(48),
                   ContainerForm(
                     child: Column(
-
                       children: [
                         TitleTextFiled(
                           title: AppString.email,
@@ -44,6 +50,22 @@ class LoginPage extends StatelessWidget {
                         TitleTextFiled(
                           title: AppString.password,
                           hint: "***************",
+                        ),
+                        Gap(8),
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            AppString.forgetPassword,
+                            style: AppStyles.styleBold14(context),
+                          ),
+                        ),
+                        Gap(24),
+                        AuthButton(title: AppString.login, onPressed: () {}),
+                        Gap(10),
+                        FotterForm(
+                          onPressed: () => context.go(AppRoute.signupView),
+                          title: AppString.dontHaveAccount,
+                          subTitle: AppString.signUp,
                         ),
                       ],
                     ),
@@ -58,66 +80,10 @@ class LoginPage extends StatelessWidget {
   }
 }
 
-class HeaderWidget extends StatelessWidget {
-  const HeaderWidget({super.key, required this.title});
 
-  final String title;
 
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SvgPicture.asset(Assets.imagesWrittenLogo),
-        Gap(29),
-        Text(title, style: AppStyles.styleBold34(context)),
-      ],
-    );
-  }
-}
 
-class ContainerForm extends StatelessWidget {
-  const ContainerForm({super.key, required this.child});
 
-  final Widget child;
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 28),
-      decoration: BoxDecoration(
-        border: Border.all(color: AppColor.secondaryColor),
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: child,
-    );
-  }
-}
 
-class TitleTextFiled extends StatelessWidget {
-  const TitleTextFiled({
-    super.key,
-    required this.title,
-    required this.hint,
-  });
 
-  final String title;
-  final String hint;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          title,
-          style: AppStyles.styleBold14(context),
-        ),
-        CustomTextFiled(
-          hint: hint,
-          maxLine: 1,
-          labelText: "",
-        ),
-      ],
-    );
-  }
-}

@@ -8,5 +8,6 @@ abstract class AppString{
   static const String password = "Password";
   static const String email = "Email";
   static const String hintExample = "example@example.com";
+  static const String login = "Login";
 
 }
