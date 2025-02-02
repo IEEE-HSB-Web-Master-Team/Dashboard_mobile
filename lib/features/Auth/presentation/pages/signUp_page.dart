@@ -1,9 +1,12 @@
 import 'package:dash_board_ieee/config/routes/routs.dart';
+import 'package:dash_board_ieee/core/utils/app_color.dart';
 import 'package:dash_board_ieee/core/utils/app_string.dart';
+import 'package:dash_board_ieee/core/utils/app_style.dart';
 import 'package:dash_board_ieee/features/Auth/presentation/widgets/auth_button.dart';
 import 'package:dash_board_ieee/features/Auth/presentation/widgets/container_form.dart';
 import 'package:dash_board_ieee/features/Auth/presentation/widgets/form_fotter.dart';
 import 'package:dash_board_ieee/features/Auth/presentation/widgets/header_widget.dart';
+import 'package:dash_board_ieee/features/Auth/presentation/widgets/select_role_section.dart';
 import 'package:dash_board_ieee/features/Auth/presentation/widgets/title_text_filed.dart';
 import 'package:dash_board_ieee/generated/assets.dart';
 import 'package:flutter/material.dart';
@@ -52,7 +55,9 @@ class SignupPage extends StatelessWidget {
                           title: AppString.confirmPassword,
                           hint: "********",
                         ),
-                        Gap(24),
+                        Gap(16),
+                        SelectRoleSection(),
+                        Gap(16),
                         AuthButton(
                           title: AppString.signUp,
                           onPressed: () {},
@@ -75,3 +80,4 @@ class SignupPage extends StatelessWidget {
     );
   }
 }
+

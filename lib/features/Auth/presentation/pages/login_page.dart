@@ -45,14 +45,11 @@ class LoginPage extends StatelessWidget {
                         TitleTextFiled(
                           title: AppString.email,
                           hint: AppString.email,
-                         
                         ),
                         Gap(8),
                         TitleTextFiled(
                           title: AppString.password,
-                      
                           hint: AppString.password,
-                          
                         ),
                         Gap(8),
                         Align(
@@ -70,6 +67,7 @@ class LoginPage extends StatelessWidget {
                           title: AppString.dontHaveAccount,
                           subTitle: AppString.signUp,
                         ),
+                      
                       ],
                     ),
                   )
@@ -82,11 +80,3 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
