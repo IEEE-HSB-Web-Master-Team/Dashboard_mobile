@@ -6,14 +6,14 @@ import 'package:either_dart/either.dart';
 import 'package:injectable/injectable.dart';
 import 'package:dio/dio.dart';
 import '../../mapper/auth_mapper.dart';
-import '../contracts/login_online_data_source.dart';
+import '../contracts/auth_online_data_source.dart';
 
-@Injectable(as: LoginOnlineDataSource)
-class LoginOnlineDataSourceImpl implements LoginOnlineDataSource {
+@Injectable(as: AuthOnlineDataSource)
+class AuthOnlineDataSourceImpl implements AuthOnlineDataSource {
   final NewApiManger _apiManger;
 
   @factoryMethod
-  LoginOnlineDataSourceImpl(this._apiManger);
+  AuthOnlineDataSourceImpl(this._apiManger);
 
   @override
   Future<Either<Failure, LoginResponseEntity>> login(

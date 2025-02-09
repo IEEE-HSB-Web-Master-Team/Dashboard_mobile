@@ -4,7 +4,7 @@ import 'package:either_dart/either.dart';
 
 import '../../../../../core/erorr/failure.dart';
 
-abstract class LoginOnlineDataSource {
+abstract class AuthOnlineDataSource {
   Future<Either<Failure, LoginResponseEntity>> login(
       LoginRequestEntity request);
 }
