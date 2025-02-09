@@ -1,18 +1,20 @@
+import 'package:dash_board_ieee/core/utils/app_color.dart';
 import 'package:flutter/material.dart';
 
 import '../app_style.dart';
 import '../helper.dart';
 
-class CustomCampaignTextFiled extends StatelessWidget {
-  const CustomCampaignTextFiled(
-      {super.key,
-      this.icon,
-      required this.hint,
-      required this.maxLine,
-      required this.labelText,
-      this.textEditingController,
-      this.textInputType,
-      this.validator});
+class CustomTextFiled extends StatelessWidget {
+  const CustomTextFiled({
+    super.key,
+    this.icon,
+    required this.hint,
+    required this.maxLine,
+    required this.labelText,
+    this.textEditingController,
+    this.textInputType,
+    this.validator,
+  });
 
   final String hint;
   final String labelText;
@@ -30,15 +32,14 @@ class CustomCampaignTextFiled extends StatelessWidget {
       keyboardType: textInputType,
       controller: textEditingController,
       decoration: InputDecoration(
+          fillColor: Colors.white,
+          filled: true,
           border: Helper.buildOutlineInputBorder(),
           enabledBorder: Helper.buildOutlineInputBorder(),
           disabledBorder: Helper.buildOutlineInputBorder(),
-          labelText: labelText,
-          labelStyle: TextStyle(),
           hintText: hint,
-          hintStyle: TextStyle(),
+          hintStyle: TextStyle(color: AppColor.primaryColor.withOpacity(.3)),
           prefixIcon: icon),
-      maxLines: maxLine,
     );
   }
 }
