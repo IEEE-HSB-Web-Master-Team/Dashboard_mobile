@@ -14,7 +14,7 @@ class _NewApiManger implements NewApiManger {
     this.baseUrl,
     this.errorLogger,
   }) {
-    baseUrl ??= '/';
+    baseUrl ??= 'https://mobile-dashboard-ieee.vercel.app/';
   }
 
   final Dio _dio;
