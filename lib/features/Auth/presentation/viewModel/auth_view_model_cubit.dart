@@ -16,6 +16,7 @@ part 'auth_view_model_state.dart';
 class AuthViewModelCubit extends Cubit<AuthViewModelState> {
   final AuthUseCase _useCase;
 
+  @factoryMethod
   AuthViewModelCubit(this._useCase) : super(AuthViewModelInitial());
 
   void doAction(AuthActions action) {

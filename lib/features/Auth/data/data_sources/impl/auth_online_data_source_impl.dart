@@ -1,11 +1,8 @@
-import 'package:dash_board_ieee/core/erorr/failure.dart';
 import 'package:dash_board_ieee/core/network/api_execute.dart';
 import 'package:dash_board_ieee/core/network/api_result.dart';
 import 'package:dash_board_ieee/features/Auth/domain/entities/request/login_request_entity.dart';
 import 'package:dash_board_ieee/features/Auth/domain/entities/response/login_response_entity.dart';
-import 'package:either_dart/either.dart';
 import 'package:injectable/injectable.dart';
-import 'package:dio/dio.dart';
 import '../../../../../core/network/api/api_manger.dart';
 import '../../mapper/auth_mapper.dart';
 import '../contracts/auth_online_data_source.dart';

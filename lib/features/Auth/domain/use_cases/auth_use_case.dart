@@ -2,8 +2,6 @@ import 'package:dash_board_ieee/core/network/api_result.dart';
 import 'package:dash_board_ieee/features/Auth/domain/contracts/auth_repo.dart';
 import 'package:either_dart/either.dart';
 import 'package:injectable/injectable.dart';
-
-import '../../../../core/erorr/failure.dart';
 import '../entities/request/login_request_entity.dart';
 import '../entities/response/login_response_entity.dart';
 
