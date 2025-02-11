@@ -1,3 +1,4 @@
+import 'package:dash_board_ieee/core/network/api_result.dart';
 import 'package:dash_board_ieee/features/Auth/domain/contracts/auth_repo.dart';
 import 'package:either_dart/either.dart';
 import 'package:injectable/injectable.dart';
@@ -13,8 +14,7 @@ class AuthUseCase {
   @factoryMethod
   const AuthUseCase(this._authRepo);
 
-  Future<Either<Failure, LoginResponseEntity>> login(
-      LoginRequestEntity request) {
+  Future<DataResult<LoginResponseEntity>> login(LoginRequestEntity request) {
     return _authRepo.login(request);
   }
 }

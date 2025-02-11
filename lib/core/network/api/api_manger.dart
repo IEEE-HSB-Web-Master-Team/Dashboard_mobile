@@ -3,8 +3,7 @@ import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:retrofit/error_logger.dart';
 import 'package:retrofit/http.dart';
-
-import '../../features/Auth/data/models/request/login_request_dto.dart';
+import '../../../features/Auth/data/models/request/login_request_dto.dart';
 import 'end_points.dart';
 
 part 'api_manger.g.dart';

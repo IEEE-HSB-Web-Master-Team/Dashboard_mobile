@@ -6,6 +6,8 @@ import 'package:dash_board_ieee/features/Auth/domain/entities/response/login_res
 import 'package:either_dart/src/either.dart';
 import 'package:injectable/injectable.dart';
 
+import '../../../../core/network/api_result.dart';
+
 @Injectable(as: AuthRepo)
 class AuthRepoImpl implements AuthRepo {
   final AuthOnlineDataSource _onlineDataSource;
@@ -14,7 +16,7 @@ class AuthRepoImpl implements AuthRepo {
   const AuthRepoImpl(this._onlineDataSource);
 
   @override
-  Future<Either<Failure, LoginResponseEntity>> login(
+  Future<DataResult<LoginResponseEntity>> login(
       LoginRequestEntity request) async {
     return await _onlineDataSource.login(request);
   }
