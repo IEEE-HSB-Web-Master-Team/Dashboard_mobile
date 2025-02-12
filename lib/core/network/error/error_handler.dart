@@ -67,7 +67,6 @@ class ErrorHandler {
         return const ErrorModel(
             message: "Gateway Timeout. The server took too long to respond.");
       default:
-        // Ensure we convert response data to ErrorModel
         if (error.response?.data is Map<String, dynamic>) {
           final errorModel =
               ErrorModel.fromMap(error.response!.data as Map<String, dynamic>);
