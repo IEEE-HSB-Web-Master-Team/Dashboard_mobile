@@ -1,3 +1,4 @@
+import 'package:dash_board_ieee/core/utils/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -26,7 +27,7 @@ class CustomToast {
   static void showLoadingToast({required String message}) {
     showToast(
       message: message,
-      backgroundColor: Colors.blueAccent,
+      backgroundColor: AppColor.primaryColor,
       gravity: ToastGravity.BOTTOM,
       icon: Icons.hourglass_bottom,
     );

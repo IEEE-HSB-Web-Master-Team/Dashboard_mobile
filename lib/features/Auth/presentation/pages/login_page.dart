@@ -17,7 +17,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
+import 'package:quickalert/quickalert.dart';
+import '../../../../core/utils/app_color.dart';
 import '../viewModel/auth_view_model_cubit.dart';
 
 class LoginPage extends StatefulWidget {
@@ -64,8 +65,15 @@ class _LoginPageState extends State<LoginPage> {
                 CustomToast.showSuccessToast(message: 'Success');
                 break;
               case LoginErrorState():
-                CustomToast.showErrorToast(
-                    message: state.errorMessage.error.toString());
+                QuickAlert.show(
+                  context: context,
+                  type: QuickAlertType.error,
+                  text: state.errorMessage.message.toString(),
+                  confirmBtnText: 'OK',
+                  onConfirmBtnTap: () => context.pop(),
+                  title: 'Login Failed',
+                  confirmBtnColor: AppColor.primaryColor,
+                );
                 break;
               default:
                 null;

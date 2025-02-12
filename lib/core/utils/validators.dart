@@ -16,7 +16,7 @@ class Validators {
     if (value == null || value.isEmpty) {
       return 'enter password';
     }
-    if (value.length < 6) {
+    if (value.length < 8) {
       return 'password must be at least 6 characters';
     }
     return null;
