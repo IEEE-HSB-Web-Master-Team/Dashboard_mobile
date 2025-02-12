@@ -3,10 +3,14 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+import 'core/di/service_locator.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  configureDependencies();
   runApp(
     DevicePreview(
-      enabled: !kReleaseMode,
+      enabled: kReleaseMode,
       builder: (context) => MyApp(), // Wrap your app
     ),
   );
