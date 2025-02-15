@@ -1,5 +1,3 @@
-
-
 import 'package:dash_board_ieee/core/utils/app_style.dart';
 import 'package:dash_board_ieee/generated/assets.dart';
 import 'package:flutter/material.dart';

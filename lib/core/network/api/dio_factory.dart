@@ -15,7 +15,7 @@ abstract class DioFactory {
       ..options.connectTimeout = timeOut
       ..options.receiveTimeout = timeOut;
     _addDioInterceptors(dio);
-    _addDioHeader(dio,storageToken);
+    _addDioHeader(dio, storageToken);
 
     return dio;
   }
@@ -29,11 +29,10 @@ abstract class DioFactory {
     ));
   }
 
-  void _addDioHeader(Dio dio,StorageToken storageToken)async {
-    dio.options.headers= {
+  void _addDioHeader(Dio dio, StorageToken storageToken) async {
+    dio.options.headers = {
       'Content-Type': 'application/json',
       "token": await storageToken.getToken(),
     };
   }
-
 }

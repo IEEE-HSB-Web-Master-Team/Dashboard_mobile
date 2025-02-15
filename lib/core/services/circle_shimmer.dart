@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class CircularSkeleton extends StatelessWidget {
   final double? size;
 

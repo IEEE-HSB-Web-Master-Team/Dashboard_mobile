@@ -1,5 +1,9 @@
+import 'package:dash_board_ieee/core/utils/app_color.dart';
+import 'package:dash_board_ieee/core/utils/helper.dart';
+import 'package:dash_board_ieee/generated/assets.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class CustomDropMenu extends StatefulWidget {
   CustomDropMenu(
@@ -42,18 +46,23 @@ class _CustomDropMenuState extends State<CustomDropMenu> {
         },
         buttonStyleData: ButtonStyleData(
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              border: const Border(
-                top: BorderSide(color: Color(0xffE4DFDF)),
-                bottom: BorderSide(color: Color(0xffE4DFDF)),
-                right: BorderSide(color: Color(0xffE4DFDF)),
-                left: BorderSide(color: Color(0xffE4DFDF)),
-              )),
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(8),
+            border: Border(
+              bottom: BorderSide(
+                color: AppColor.primaryColor,
+                strokeAlign: BorderSide.strokeAlignOutside,
+              ),
+            ),
+          ),
           padding: const EdgeInsets.symmetric(horizontal: 10),
           height: widget.isAuth ? 40 : null,
           width: widget.isAuth ? 140 : null,
         ),
         menuItemStyleData: const MenuItemStyleData(),
+        iconStyleData: IconStyleData(
+          icon: SvgPicture.asset(Assets.dropDownIcon),
+        ),
       ),
     );
   }
