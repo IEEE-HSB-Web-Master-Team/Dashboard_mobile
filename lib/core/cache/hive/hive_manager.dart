@@ -1,7 +1,6 @@
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-
 class HiveManager {
   void inti() async {
     await Hive.initFlutter();
@@ -9,14 +8,9 @@ class HiveManager {
     await _openBox();
   }
 
-  void _registerAdapter() {
+  void _registerAdapter() {}
 
-  }
-
-  Future<void> _openBox() async {
-
-
-  }
+  Future<void> _openBox() async {}
 
   void cacheData<T>(
       {required String boxKey, List<T>? dataList, T? dataItem}) async {
@@ -38,6 +32,4 @@ class HiveManager {
   deleteData<T>(String boxKey) {
     var box = Hive.box<T>(boxKey);
   }
-
-
 }

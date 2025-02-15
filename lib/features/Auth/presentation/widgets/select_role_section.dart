@@ -11,7 +11,7 @@ class SelectRoleSection extends StatefulWidget {
 }
 
 class _SelectRoleSectionState extends State<SelectRoleSection> {
- String selectedRole = AppString.admin;
+  String selectedRole = AppString.admin;
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class Skeleton extends StatelessWidget {
   final double? height, width;
 

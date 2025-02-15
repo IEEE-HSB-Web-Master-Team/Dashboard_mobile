@@ -1,9 +1,9 @@
-abstract class AppString{
+abstract class AppString {
   static const String helpMessage = "Need help?";
   static const String welcome = "Welcome back";
   static const String signUp = "Sign up";
   static const String dontHaveAccount = "Don't have an account?";
-  static const String alreadyHaveAccount= "Already have an account?";
+  static const String alreadyHaveAccount = "Already have an account?";
   static const String orLogInWith = "Or log in with";
   static const String forgetPassword = "Forget password";
   static const String password = "Password";
@@ -15,6 +15,4 @@ abstract class AppString{
   static const String commite = "Committee";
   static const String admin = "Admin";
   static const String volunteer = "Volunteer";
-
-
 }

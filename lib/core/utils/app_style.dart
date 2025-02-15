@@ -16,6 +16,7 @@ abstract class AppStyles {
       fontWeight: FontWeight.w500,
     );
   }
+
   static TextStyle styleBold14(context) {
     return TextStyle(
       color: AppColor.primaryColor,
@@ -23,19 +24,22 @@ abstract class AppStyles {
       fontWeight: FontWeightHelper.bold,
     );
   }
+
   static TextStyle styleBold15(context) {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 15),
       fontWeight: FontWeightHelper.bold,
     );
   }
+
   static TextStyle styleBold16(context) {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 16),
       fontWeight: FontWeightHelper.bold,
     );
   }
-    static TextStyle styleBold18(context) {
+
+  static TextStyle styleBold18(context) {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 18),
       fontWeight: FontWeightHelper.bold,

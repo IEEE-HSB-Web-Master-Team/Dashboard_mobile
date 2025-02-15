@@ -36,31 +36,32 @@ class SignupPage extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    HeaderWidget(
+                    const HeaderWidget(
                       title: AppString.createAmAccount,
                     ),
-                    Gap(24),
+                    const Gap(24),
                     ContainerForm(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          TitleTextFiled(
+                          const TitleTextFiled(
                             title: AppString.email,
                             hint: AppString.hintExample,
                           ),
-                          Gap(8),
-                          TitleTextFiled(
+                          const Gap(8),
+                          const TitleTextFiled(
                             title: AppString.password,
                             hint: "*********",
                           ),
-                          Gap(8),
-                          TitleTextFiled(
+                          const Gap(8),
+                          const TitleTextFiled(
                             title: AppString.confirmPassword,
                             hint: "********",
                           ),
-                          Gap(16),
-                          Text("Select Role", style: AppStyles.styleBold14(context)),
-                          Gap(8),
+                          const Gap(16),
+                          Text("Select Role",
+                              style: AppStyles.styleBold14(context)),
+                          const Gap(8),
                           CustomDropMenu(
                             items: Map.fromIterable([
                               "Chair",
@@ -72,14 +73,14 @@ class SignupPage extends StatelessWidget {
                             isAuth: false,
                             setValue: (value) {},
                           ),
-                          Gap(16),
+                          const Gap(16),
                           Center(
                             child: AuthButton(
                               title: AppString.signUp,
                               onPressed: () {},
                             ),
                           ),
-                          Gap(10),
+                          const Gap(10),
                           FotterForm(
                             onPressed: () => context.go(AppRoute.loginView),
                             title: AppString.alreadyHaveAccount,

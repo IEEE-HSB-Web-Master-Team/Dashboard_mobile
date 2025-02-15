@@ -1,3 +1,3 @@
-class HiveKeys{
- static const String userBox="userBox";
+class HiveKeys {
+  static const String userBox = "userBox";
 }

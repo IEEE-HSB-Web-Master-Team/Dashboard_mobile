@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 import '../utils/app_color.dart';
 import '../utils/app_style.dart';
 
@@ -18,9 +16,7 @@ class SnackBarServices {
       action: SnackBarAction(
         textColor: Colors.black,
         label: "Login",
-        onPressed: () {
-
-        },
+        onPressed: () {},
       ),
     );
     ScaffoldMessenger.of(context).showSnackBar(snackBar);

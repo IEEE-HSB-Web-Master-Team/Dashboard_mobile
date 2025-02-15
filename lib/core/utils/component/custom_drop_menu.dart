@@ -45,7 +45,6 @@ class _CustomDropMenuState extends State<CustomDropMenu> {
           });
         },
         buttonStyleData: ButtonStyleData(
-      
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(8),
@@ -64,8 +63,6 @@ class _CustomDropMenuState extends State<CustomDropMenu> {
         iconStyleData: IconStyleData(
           icon: SvgPicture.asset(Assets.dropDownIcon),
         ),
-        
-
       ),
     );
   }
