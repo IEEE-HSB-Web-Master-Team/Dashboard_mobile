@@ -17,10 +17,8 @@ class AuthUseCase {
   Future<DataResult<LoginResponseEntity>> login(LoginRequestEntity request) {
     return _authRepo.login(request);
   }
-   Future<DataResult<SignupResponseEntity>> signup(SignupReqestEtity request) {
+
+  Future<DataResult<SignupResponseEntity>> signup(SignupReqestEtity request) {
     return _authRepo.signup(request);
   }
-  
-
- 
 }

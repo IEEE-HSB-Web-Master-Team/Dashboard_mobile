@@ -22,8 +22,8 @@ class AuthRepoImpl implements AuthRepo {
   }
 
   @override
-  Future<DataResult<SignupResponseEntity>> signup(SignupReqestEtity request) {
-    // TODO: implement signup
-    throw UnimplementedError();
+  Future<DataResult<SignupResponseEntity>> signup(SignupReqestEtity request)async {
+    return await _onlineDataSource.signup(request);
+   
   }
 }
