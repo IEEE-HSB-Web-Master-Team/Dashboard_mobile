@@ -2,6 +2,7 @@ import 'package:dash_board_ieee/config/routes/routs.dart';
 import 'package:dash_board_ieee/core/utils/app_color.dart';
 import 'package:dash_board_ieee/core/utils/app_string.dart';
 import 'package:dash_board_ieee/core/utils/app_style.dart';
+import 'package:dash_board_ieee/core/utils/component/custom_drop_menu.dart';
 import 'package:dash_board_ieee/features/Auth/presentation/widgets/auth_button.dart';
 import 'package:dash_board_ieee/features/Auth/presentation/widgets/container_form.dart';
 import 'package:dash_board_ieee/features/Auth/presentation/widgets/form_fotter.dart';
@@ -32,46 +33,63 @@ class SignupPage extends StatelessWidget {
           Positioned.fill(
             child: Padding(
               padding: const EdgeInsets.all(40.0),
-              child: Column(
-                children: [
-                  HeaderWidget(
-                    title: AppString.createAmAccount,
-                  ),
-                  Gap(24),
-                  ContainerForm(
-                    child: Column(
-                      children: [
-                        TitleTextFiled(
-                          title: AppString.email,
-                          hint: AppString.hintExample,
-                        ),
-                        Gap(8),
-                        TitleTextFiled(
-                          title: AppString.password,
-                          hint: "*********",
-                        ),
-                        Gap(8),
-                        TitleTextFiled(
-                          title: AppString.confirmPassword,
-                          hint: "********",
-                        ),
-                        Gap(16),
-                        SelectRoleSection(),
-                        Gap(16),
-                        AuthButton(
-                          title: AppString.signUp,
-                          onPressed: () {},
-                        ),
-                        Gap(10),
-                        FotterForm(
-                          onPressed: () => context.go(AppRoute.loginView),
-                          title: AppString.alreadyHaveAccount,
-                          subTitle: AppString.login,
-                        ),
-                      ],
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    HeaderWidget(
+                      title: AppString.createAmAccount,
                     ),
-                  ),
-                ],
+                    Gap(24),
+                    ContainerForm(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          TitleTextFiled(
+                            title: AppString.email,
+                            hint: AppString.hintExample,
+                          ),
+                          Gap(8),
+                          TitleTextFiled(
+                            title: AppString.password,
+                            hint: "*********",
+                          ),
+                          Gap(8),
+                          TitleTextFiled(
+                            title: AppString.confirmPassword,
+                            hint: "********",
+                          ),
+                          Gap(16),
+                          Text("Select Role", style: AppStyles.styleBold14(context)),
+                          Gap(8),
+                          CustomDropMenu(
+                            items: Map.fromIterable([
+                              "Chair",
+                              "Director",
+                              "Volunteer",
+                              "Participant"
+                            ]),
+                            selectedValue: "Chair",
+                            isAuth: false,
+                            setValue: (value) {},
+                          ),
+                          Gap(16),
+                          Center(
+                            child: AuthButton(
+                              title: AppString.signUp,
+                              onPressed: () {},
+                            ),
+                          ),
+                          Gap(10),
+                          FotterForm(
+                            onPressed: () => context.go(AppRoute.loginView),
+                            title: AppString.alreadyHaveAccount,
+                            subTitle: AppString.login,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           )
@@ -80,4 +98,3 @@ class SignupPage extends StatelessWidget {
     );
   }
 }
-

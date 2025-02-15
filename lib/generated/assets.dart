@@ -10,5 +10,7 @@ class Assets {
   static const String imagesLogo = 'assets/images/logo.png';
   static const String imagesPendingApprove = 'assets/images/pending_approve.svg';
   static const String imagesWrittenLogo = 'assets/images/written_logo.svg';
+  static const String dropDownIcon = 'assets/images/drop_down_Icon.svg';
+  
 
 }

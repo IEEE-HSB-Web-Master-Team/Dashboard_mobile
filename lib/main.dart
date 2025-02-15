@@ -10,7 +10,7 @@ void main() async {
   configureDependencies();
   runApp(
     DevicePreview(
-      enabled: kReleaseMode,
+      enabled: !kReleaseMode,
       builder: (context) => MyApp(), // Wrap your app
     ),
   );
