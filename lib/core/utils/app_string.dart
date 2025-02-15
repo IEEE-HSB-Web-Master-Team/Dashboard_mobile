@@ -15,4 +15,11 @@ abstract class AppString {
   static const String commite = "Committee";
   static const String admin = "Admin";
   static const String volunteer = "Volunteer";
+  static const String userName= "User Name";
+  static const String userNameEx= "ex.John Doe";
+  static const String hintPhone= "ex.0123456789";
+  static const String phone= "Phone";
+  static const String male= "male";
+  static const String female="female";
+
 }

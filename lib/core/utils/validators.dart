@@ -21,4 +21,39 @@ class Validators {
     }
     return null;
   }
+  // validte confirm password
+   static String? validateConfirmPassword(String? password, String? confirmPassword, BuildContext context) {
+    if (confirmPassword == null || confirmPassword.isEmpty) {
+      return 'enter confirm password';
+    }
+    if (password != confirmPassword) {
+      return 'passwords do not match';
+    }
+    return null;
+  }
+  // validate  Empty
+  static String? validateEmpty(String? value, String? title) {
+    if (value == null || value.trim().isEmpty) {
+      return 'You must enter your $title';
+    }
+    return null;
+  }
+  // validate phone number
+   static String? validatePhoneNumber(String? value) {
+    if (value == null || value.trim().isEmpty) {
+      return 'You must enter your phone';
+    }
+
+    var regex = RegExp(
+      r"^(?:\+20|0)?1[0125]\d{8}$",
+    );
+
+    if (!regex.hasMatch(value)) {
+      return """Must be 11 digits starts with (+20) or 0
+Prefix is 10, 11, 12 or 15 only""";
+    }
+
+    return null;
+  }
+
 }

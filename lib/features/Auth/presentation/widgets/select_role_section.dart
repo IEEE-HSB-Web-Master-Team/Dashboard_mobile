@@ -1,7 +1,9 @@
 import 'package:dash_board_ieee/core/utils/app_color.dart';
 import 'package:dash_board_ieee/core/utils/app_string.dart';
 import 'package:dash_board_ieee/core/utils/app_style.dart';
+import 'package:dash_board_ieee/features/Auth/presentation/viewModel/auth_view_model_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SelectRoleSection extends StatefulWidget {
   const SelectRoleSection({super.key});
@@ -11,7 +13,7 @@ class SelectRoleSection extends StatefulWidget {
 }
 
 class _SelectRoleSectionState extends State<SelectRoleSection> {
-  String selectedRole = AppString.admin;
+  String selectedGender = AppString.male;
 
   @override
   Widget build(BuildContext context) {
@@ -19,22 +21,24 @@ class _SelectRoleSectionState extends State<SelectRoleSection> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         CustomRadio(
-          title: AppString.admin,
-          value: AppString.admin,
-          groupValue: selectedRole,
+          title: AppString.male,
+          value: AppString.male,
+          groupValue: selectedGender,
           onChanged: (value) {
+            context.read<AuthViewModelCubit>().selectedGender=value;
             setState(() {
-              selectedRole = value!;
+              selectedGender = value!;
             });
           },
         ),
         CustomRadio(
-          title: AppString.volunteer,
-          value: AppString.volunteer,
-          groupValue: selectedRole,
+          title: AppString.female,
+          value: AppString.female,
+          groupValue: selectedGender,
           onChanged: (value) {
             setState(() {
-              selectedRole = value!;
+              context.read<AuthViewModelCubit>().selectedGender=value;
+              selectedGender = value!;
             });
           },
         ),
